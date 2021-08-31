@@ -30,16 +30,16 @@ resource "azurerm_resource_group" "RG1" {
 #     address_prefix = var.subeneththreeaddr
 #   }
 # }
-resource "azurerm_databricks_workspace" "bricks" {
-  name                = var.databricks
-  resource_group_name = azurerm_resource_group.RG1.name
-  location            = azurerm_resource_group.RG1.location
-  sku                 = var.databrickscompute
-
-  tags = {
-    Environment = "var.databrickstag"
-  }
-}
+#resource "azurerm_databricks_workspace" "bricks" {
+#  name                = var.databricks
+#  resource_group_name = azurerm_resource_group.RG1.name
+#  location            = azurerm_resource_group.RG1.location
+#  sku                 = var.databrickscompute
+#
+#  tags = {
+#    Environment = "var.databrickstag"
+#  }
+#}
 resource "azurerm_storage_account" "sgacc" {
   name                     = var.dtnadatalake
   resource_group_name      = azurerm_resource_group.RG1.name
